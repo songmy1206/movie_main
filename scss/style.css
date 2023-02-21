@@ -13,46 +13,49 @@ a {
   text-decoration: none;
 }
 
-body {
-  background-color: black;
-}
-
 header {
   width: 100%;
+  position: relative;
+  z-index: 999;
   border-bottom: 1px solid #999;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 5vh 5vw;
+  padding: 5vh 5vw;
+}
+header #snb {
+  display: none;
 }
 header #gnb {
   display: flex;
 }
 header #gnb li {
-  margin: 0px 20px;
+  margin: 0px 35px;
 }
 header #gnb li a {
-  font: 16px/1 "Architects Daughter";
-  color: #333;
-  letter-spacing: 1px;
+  font: 23px/1 "Architects Daughter";
+  color: #fff;
+  letter-spacing: 2.5px;
 }
 header h1 a {
-  font: bold 24px/50px "Architects Daughter";
-  color: #555;
+  font: bold 50px/50px "Architects Daughter";
+  color: #fff;
 }
 header .btn_menu {
   display: none;
+  color: #fff;
+  font-size: 20px;
 }
-
-.sns {
+header .sns {
   display: flex;
 }
-.sns li {
-  margin: 0px 10px;
+header .sns li {
+  margin: 0px 28px;
+  font-size: 20px;
 }
-.sns li a {
-  font-size: 16px;
-  color: #333;
+header .sns li a {
+  font-size: 30px/50px;
+  color: #fff;
 }
 
 figure {
@@ -67,12 +70,8 @@ figure {
 figure .text {
   position: absolute;
   left: 6vw;
-  top: 45%;
+  top: 50%;
   transform: translateY(-50%);
-}
-figure .text p {
-  font: normal 8vw/1 "Fredericka the Great";
-  color: rgb(218, 218, 218);
 }
 figure .text ul {
   display: flex;
@@ -81,15 +80,19 @@ figure .text ul {
 figure .text li {
   margin: 0px 30px;
 }
-figure .text li i {
+figure .text i {
   font-size: 20px;
   color: rgb(218, 218, 218);
   margin-right: 10px;
 }
-figure .text li strong {
-  font: 14px/1 "Architects Daughter";
+figure .text strong {
+  font: 19px/1 "Architects Daughter";
   color: rgb(218, 218, 218);
   letter-spacing: 1px;
+}
+figure p {
+  font: normal 8vw/1 "Fredericka the Great";
+  color: rgb(218, 218, 218);
 }
 figure video {
   width: 100%;
@@ -107,38 +110,24 @@ footer {
   color: rgb(218, 218, 218);
   letter-spacing: 2px;
   text-align: center;
-  padding: 5vh 5vw;
+  padding: 5vh 0;
   z-index: 2;
 }
 
 @media screen and (max-width: 968px) {
-  header #gnb {
-    display: none;
-  }
-  header .sns {
-    display: none;
+  header {
+    border: none;
   }
   header #snb {
     display: block;
   }
-  header .btn_menu {
-    display: block;
-  }
-  header figure .text {
-    top: 50%;
-  }
-  header figure .text p {
-    font-size: 15vw;
-  }
   header #snb .sub_menu {
     position: absolute;
     padding: 10px 25px;
-    background-color: rgb(173, 179, 164);
     border: 1px solid #999;
     border-radius: 10px;
     right: 5vw;
     text-align: right;
-    opacity: 1;
     transition: 0.4s;
   }
   header #snb .sub_menu.hide {
@@ -146,9 +135,27 @@ footer {
   }
   header #snb .sub_menu li {
     padding: 10px 0px;
-    font: 16px/1 "Architects Daughter";
+    font: 18px/1 "Architects Daughter";
+  }
+  header #snb .sub_menu li a {
+    color: #fff;
   }
   header #snb .sub_menu li a i {
     margin-left: 8px;
+  }
+  header #gnb {
+    display: none;
+  }
+  header .sns {
+    display: none;
+  }
+  header .btn_menu {
+    display: block;
+  }
+  figure .text {
+    top: 50%;
+  }
+  figure .text p {
+    font-size: 15vw;
   }
 }/*# sourceMappingURL=style.css.map */
