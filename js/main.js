@@ -1,4 +1,4 @@
-const snbBtn = document.querySelector("#snb .btn-_menu");
+const snbBtn = document.querySelector("#snb .btn_menu");
 const subMenu = document.querySelector("#snb .sub_menu");
 
 snbBtn.addEventListener("click", function(){
